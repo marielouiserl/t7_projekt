@@ -4,12 +4,375 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEMA 7 PROJEKT - SHOPAHOLIC</title>
+    <title>Projekt 7 - shopAholics</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
 
+
+
+    <style>
+        img {
+            max-width: 100%;
+        }
+
+        body {
+            margin: 0;
+            background-color: #F5F5F5
+        }
+
+        header {
+            text-align: center;
+            margin-top: 80px;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 80px;
+
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-bottom: 10px;
+            justify-content: space-between;
+            font-family: 'Roboto Mono', monospace;
+            background-color: white;
+        }
+
+
+        .filter_kategori {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+        }
+
+        .filter_ekstra {
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 5px;
+        }
+
+        #popup {
+            display: none;
+            position: fixed;
+            top: 10px;
+            background-color: white;
+            border: 1px solid black;
+            text-align: center;
+            padding: 40px;
+            margin-right: 40px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        #popup img {
+            width: 50%;
+        }
+
+        #popup a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        #popup a:hover {
+            text-decoration: none;
+            color: #FF00E2;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+
+        .enkeltSite {
+            text-align: center;
+        }
+
+        .enkeltSite p {
+            padding-left: 250px;
+            padding-right: 250px;
+        }
+
+        .lukpopup {
+            right: 0;
+            font-size: 30px;
+        }
+
+
+        button {
+            color: black;
+            text-align: center;
+            font-size: 16px;
+            font-family: 'Roboto Mono', monospace;
+            border-left: none;
+            border: none;
+
+        }
+
+        .filter_ekstra button {
+            display: none;
+            border: none;
+            color: black;
+            text-align: center;
+            font-size: 12px;
+            font-family: 'Roboto Mono', monospace;
+            padding-left: 20px;
+            padding-right: 20px;
+            border: none;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-variant: small-caps;
+            border-bottom: 1px solid #FF00E2;
+        }
+
+        #templateModtager {
+            display: grid;
+            grid-template-columns: 1fr;
+            background-color: white;
+            max-width: 1000px;
+            grid-gap: 10px;
+            padding-left: 40px;
+            padding-right: 40px;
+            text-align: center;
+            background-color: white;
+        }
+
+        .container {
+            padding: 10px;
+        }
+
+        article img {
+            border: 1px solid #f0f0f0;
+        }
+
+
+        @media screen and (min-width: 700px) {
+
+            #templateModtager {
+                max-width: 100%;
+                grid-template-columns: repeat(2, 1fr);
+                margin-left: 80px;
+                margin-right: 80px;
+            }
+
+            nav {
+                display: flex;
+                text-align: center;
+                margin-left: 80px;
+                margin-right: 80px;
+                background-color: white;
+                justify-content: space-around;
+                padding: 10px;
+
+            }
+
+            header {
+                margin: 80px;
+            }
+
+            #popup {
+                display: none;
+                position: fixed;
+                top: 10px;
+                background-color: white;
+                border: 1px solid black;
+                text-align: center;
+                padding: 40px;
+                margin: 0;
+                margin-right: 119px;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+
+            #templateModtager {
+                max-width: 100%;
+                grid-template-columns: repeat(3, 1fr);
+                text-align: center;
+                /*
+                margin-left: 250px;
+                margin-right: 250px;
+*/
+            }
+
+            nav {
+                display: flex;
+                text-align: center;
+                margin-left: 250px;
+                margin-right: 250px;
+                background-color: white;
+                padding-left: 40px;
+                padding-right: 40px;
+                justify-content: space-around;
+
+            }
+
+            header {
+                margin-left: 250px;
+                margin-right: 250px;
+                margin-top: 80px;
+                margin-bottom: 80px;
+            }
+
+            #popup {
+                display: none;
+                position: fixed;
+                top: 10px;
+                background-color: white;
+                border: 1px solid black;
+                text-align: center;
+                padding: 40px;
+                margin: 0;
+                margin-right: 119px;
+
+
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <header>
 
-</body>
+        <img src="logo/logo.svg" alt="logo">
 
-</html>
+
+    </header>
+    <nav>
+        <div class="filter_kategori">
+            <button class="filter" data-kategori="alle">Alle</button>
+            <button class="filter" data-kategori="tøj">Tøj</button>
+            <button class="filter" data-kategori="sko">Sko</button>
+            <button class="filter" data-kategori="bolig">Bolig</button></div>
+
+        <div class="filter_ekstra">
+            <button class="filter_køn" data-køn="begge">Begge</button>
+            <button class="filter_køn" data-køn="mand">Mænd</button>
+            <button class="filter_køn" data-køn="kvinde">Kvinder</button></div>
+
+    </nav>
+
+
+
+    <div id="templateModtager"></div>
+
+    <template id="site_template">
+
+        <div id="popup">
+            <button class="lukpopup">X</button>
+            <section class="indhold">
+
+                <article class="enkeltSite">
+                    <h2></h2>
+
+                    <img class="billede" src="">
+                    <br>
+                    <a href="" target="_blank">
+                        Gå til siden her
+                    </a>
+
+                    <p></p>
+                </article>
+
+
+
+
+            </section>
+        </div>
+
+        <article class="container">
+            <h2 class="navn"></h2>
+            <img class="billede1" src="">
+            <p class="info"></p>
+        </article>
+    </template>
+
+
+    <section id="liste"></section>
+
+    <script>
+        let alleSites;
+        const dest = document.querySelector("#templateModtager");
+        const temp = document.querySelector("#site_template");
+        let filter = "alle";
+        let køn = "begge";
+
+        document.addEventListener("DOMContentLoaded", getJson);
+
+        async function getJson() {
+            let jsonData = await fetch("https://spreadsheets.google.com/feeds/list/1Zq4nXm7sL2Vz-tsqLB3qSKQFgW6RReynNH7SS47RqWw/od6/public/values?alt=json");
+
+            // console.log("jsonData", jsonData);
+
+            alleSites = await jsonData.json();
+            // console.log("alleSites", alleSites);
+            visSites();
+        }
+
+        function visSites() {
+            console.log("filter", filter);
+            console.log("køn", køn);
+            dest.innerHTML = "";
+            alleSites.feed.entry.forEach(site => {
+                if ((filter == "alle" || filter == site.gsx$kategori.$t) && (køn == "begge" || køn == site.gsx$underkategori.$t)) {
+
+                    const klon = temp.cloneNode(true).content;
+                    klon.querySelector(".navn").textContent = site.gsx$navn.$t;
+                    klon.querySelector(".billede1").src = "img/" + site.gsx$billede.$t + ".png";
+                    dest.appendChild(klon);
+
+                    dest.lastElementChild.addEventListener("click", () => {
+                        visSingle(site)
+                    });
+
+                    addEventlistenertoButtons();
+                }
+            })
+        }
+
+        function addEventlistenertoButtons() {
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+            })
+
+            document.querySelectorAll(".filter_køn").forEach(elm => {
+                elm.addEventListener("click", filtrering_køn);
+            })
+
+            // console.log("klik knap", addEventlistenertoButtons);
+        }
+
+        function filtrering() {
+            filter = this.dataset.kategori;
+            køn = "begge";
+            visSites();
+            //console.log("filtrering sker", filtrering);
+        }
+
+        function filtrering_køn() {
+            køn = this.dataset.køn;
+            visSites();
+            // console.log("filtrering_køn sker", filtrering_køn);
+        }
+
+        function visSingle(site) {
+            document.querySelector("#popup").style.display = "block";
+            document.querySelector("#popup .lukpopup").addEventListener("click", lukSingle);
+
+            document.querySelector(".enkeltSite h2").textContent = site.gsx$navn.$t;
+            document.querySelector(".enkeltSite .billede").src = "img/" + site.gsx$billede.$t + ".png";
+            document.querySelector(".enkeltSite a").href = site.gsx$hjemmeside.$t;
+            document.querySelector(".enkeltSite p").textContent = site.gsx$tekst.$t;
+            console.log("visSingle", visSingle);
+        }
+
+        function lukSingle() {
+            document.querySelector("#popup").style.display = "none";
+        }
+    </script>
+
+
+</body></html>
