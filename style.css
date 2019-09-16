@@ -1,0 +1,239 @@
+ img {
+     max-width: 100%;
+ }
+
+ body {
+     margin: 0;
+     background-color: #e5e5e5;
+     background-image: url(logo/test5.jpg);
+     background-attachment: fixed;
+ }
+
+ header {
+     text-align: center;
+     margin-top: 80px;
+     margin-left: 10px;
+     margin-right: 10px;
+     margin-bottom: 80px;
+
+ }
+
+ #sectionwrapper {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
+
+ nav {
+     display: flex;
+     width: 800px;
+     flex-direction: column;
+     text-align: center;
+     align-items: center;
+     margin-bottom: 10px;
+     justify-content: space-between;
+     font-family: 'Roboto Mono', monospace;
+     background-color: white;
+     align-self: center;
+ }
+
+
+
+ .filter_kategori {
+     display: flex;
+     justify-content: space-around;
+     width: 80%;
+ }
+
+ .filter_ekstra {
+     width: 50%;
+     display: flex;
+     justify-content: space-around;
+     padding-bottom: 5px;
+ }
+
+ .container img {
+
+     filter: grayscale(100%);
+ }
+
+ .container img:hover {
+     filter: saturate(8);
+ }
+
+ #popup {
+     display: none;
+     position: fixed;
+     top: 10px;
+     background-color: white;
+     border: 1px solid black;
+     text-align: center;
+     padding: 40px;
+     margin-right: 40px;
+     font-family: 'Montserrat', sans-serif;
+     z-index: 1;
+ }
+
+ #popup img {
+     width: 50%;
+ }
+
+ #popup a {
+     text-decoration: none;
+     color: black;
+     font-family: 'Montserrat', sans-serif;
+ }
+
+ #popup a:hover {
+     text-decoration: none;
+     color: #FF00E2;
+     font-family: 'Montserrat', sans-serif;
+ }
+
+
+ .enkeltSite {
+     text-align: center;
+ }
+
+ .enkeltSite p {
+     padding-left: 250px;
+     padding-right: 250px;
+ }
+
+
+
+ .lukpopup {
+     right: 0;
+     font-size: 30px;
+ }
+
+
+ button {
+     color: black;
+     text-align: center;
+     font-size: 16px;
+     font-family: 'Roboto Mono', monospace;
+     border-left: none;
+     border: none;
+
+ }
+
+ .filter_ekstra button {
+     display: none;
+     border: none;
+     color: black;
+     text-align: center;
+     font-size: 12px;
+     font-family: 'Roboto Mono', monospace;
+     padding-left: 20px;
+     padding-right: 20px;
+     border: none;
+ }
+
+ h2 {
+     font-family: 'Montserrat', sans-serif;
+     font-variant: small-caps;
+     border-bottom: 1px solid #FF00E2;
+ }
+
+ #templateModtager {
+     display: grid;
+     grid-template-columns: 1fr;
+     background-color: white;
+     max-width: 800px;
+     grid-gap: 10px;
+     padding-left: 40px;
+     padding-right: 40px;
+     text-align: center;
+     background-color: white;
+     align-self: center;
+ }
+
+
+ .container {
+     padding: 10px;
+ }
+
+ article img {
+     border: 1px solid #f0f0f0;
+ }
+
+
+ @media screen and (min-width: 700px) {
+
+     #templateModtager {
+         max-width: 100%;
+         grid-template-columns: repeat(2, 1fr);
+
+     }
+
+     nav {
+         display: flex;
+         text-align: center;
+         background-color: white;
+         justify-content: space-around;
+         padding: 10px;
+
+     }
+
+     header {
+         margin: 80px;
+     }
+
+     #popup {
+         display: none;
+         position: fixed;
+         top: 10px;
+         background-color: white;
+         border: 1px solid black;
+         text-align: center;
+         padding: 40px;
+         margin: 0;
+         margin-right: 119px;
+     }
+ }
+
+ @media screen and (min-width: 1200px) {
+
+     #templateModtager {
+         max-width: 800px;
+         grid-template-columns: repeat(3, 1fr);
+         text-align: center;
+         /*
+                margin-left: 250px;
+                margin-right: 250px;
+*/
+     }
+
+     nav {
+         display: flex;
+         text-align: center;
+         background-color: white;
+         padding-left: 40px;
+         padding-right: 40px;
+         justify-content: space-around;
+
+     }
+
+     header {
+         margin-left: 250px;
+         margin-right: 250px;
+         margin-top: 80px;
+         margin-bottom: 80px;
+     }
+
+     #popup {
+         display: none;
+         position: fixed;
+         top: 10px;
+         background-color: white;
+         border: 1px solid black;
+         text-align: center;
+         padding: 40px;
+         margin: 0;
+         margin-right: 119px;
+
+
+     }
+ }

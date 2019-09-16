@@ -17,7 +17,9 @@
 
         body {
             margin: 0;
-            background-color: #F5F5F5
+            background-color: #e5e5e5;
+            background-image: url(logo/test5.jpg);
+            background-attachment: fixed;
         }
 
         header {
@@ -29,18 +31,26 @@
 
         }
 
+        #sectionwrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
         nav {
             display: flex;
+            width: 800px;
             flex-direction: column;
             text-align: center;
             align-items: center;
-            margin-left: 40px;
-            margin-right: 40px;
             margin-bottom: 10px;
             justify-content: space-between;
             font-family: 'Roboto Mono', monospace;
             background-color: white;
+            align-self: center;
         }
+
 
 
         .filter_kategori {
@@ -56,6 +66,15 @@
             padding-bottom: 5px;
         }
 
+        .container img {
+
+            filter: grayscale(100%);
+        }
+
+        .container img:hover {
+            filter: saturate(8);
+        }
+
         #popup {
             display: none;
             position: fixed;
@@ -66,6 +85,7 @@
             padding: 40px;
             margin-right: 40px;
             font-family: 'Montserrat', sans-serif;
+            z-index: 1;
         }
 
         #popup img {
@@ -93,6 +113,8 @@
             padding-left: 250px;
             padding-right: 250px;
         }
+
+
 
         .lukpopup {
             right: 0;
@@ -132,13 +154,15 @@
             display: grid;
             grid-template-columns: 1fr;
             background-color: white;
-            max-width: 1000px;
+            max-width: 800px;
             grid-gap: 10px;
             padding-left: 40px;
             padding-right: 40px;
             text-align: center;
             background-color: white;
+            align-self: center;
         }
+
 
         .container {
             padding: 10px;
@@ -154,15 +178,12 @@
             #templateModtager {
                 max-width: 100%;
                 grid-template-columns: repeat(2, 1fr);
-                margin-left: 80px;
-                margin-right: 80px;
+
             }
 
             nav {
                 display: flex;
                 text-align: center;
-                margin-left: 80px;
-                margin-right: 80px;
                 background-color: white;
                 justify-content: space-around;
                 padding: 10px;
@@ -189,7 +210,7 @@
         @media screen and (min-width: 1200px) {
 
             #templateModtager {
-                max-width: 100%;
+                max-width: 800px;
                 grid-template-columns: repeat(3, 1fr);
                 text-align: center;
                 /*
@@ -201,8 +222,6 @@
             nav {
                 display: flex;
                 text-align: center;
-                margin-left: 250px;
-                margin-right: 250px;
                 background-color: white;
                 padding-left: 40px;
                 padding-right: 40px;
@@ -241,54 +260,58 @@
 
 
     </header>
-    <nav>
-        <div class="filter_kategori">
-            <button class="filter" data-kategori="alle">Alle</button>
-            <button class="filter" data-kategori="tøj">Tøj</button>
-            <button class="filter" data-kategori="sko">Sko</button>
-            <button class="filter" data-kategori="bolig">Bolig</button></div>
 
-        <div class="filter_ekstra">
-            <button class="filter_køn" data-køn="begge">Begge</button>
-            <button class="filter_køn" data-køn="mand">Mænd</button>
-            <button class="filter_køn" data-køn="kvinde">Kvinder</button></div>
+    <div id="sectionwrapper">
+        <nav>
+            <div class="filter_kategori">
+                <button class="filter" data-kategori="alle">Alle</button>
+                <button class="filter" data-kategori="tøj">Tøj</button>
+                <button class="filter" data-kategori="sko">Sko</button>
+                <button class="filter" data-kategori="bolig">Bolig</button></div>
 
-    </nav>
+            <div class="filter_ekstra">
+                <button class="filter_køn" data-køn="begge">Begge</button>
+                <button class="filter_køn" data-køn="mand">Mænd</button>
+                <button class="filter_køn" data-køn="kvinde">Kvinder</button></div>
 
-
-
-    <div id="templateModtager"></div>
-
-    <template id="site_template">
-
-        <div id="popup">
-            <button class="lukpopup">X</button>
-            <section class="indhold">
-
-                <article class="enkeltSite">
-                    <h2></h2>
-
-                    <img class="billede" src="">
-                    <br>
-                    <a href="" target="_blank">
-                        Gå til siden her
-                    </a>
-
-                    <p></p>
-                </article>
+        </nav>
 
 
 
+        <div id="templateModtager"></div>
 
-            </section>
-        </div>
+        <template id="site_template">
 
-        <article class="container">
-            <h2 class="navn"></h2>
-            <img class="billede1" src="">
-            <p class="info"></p>
-        </article>
-    </template>
+            <div id="popup">
+                <button class="lukpopup">X</button>
+                <section class="indhold">
+
+                    <article class="enkeltSite">
+                        <h2></h2>
+
+                        <img class="billede" src="">
+                        <br>
+                        <a href="" target="_blank">
+                            Gå til siden her
+                        </a>
+
+                        <p></p>
+                    </article>
+
+
+
+
+                </section>
+            </div>
+
+            <article class="container">
+                <h2 class="navn"></h2>
+                <img class="billede1" src="">
+                <p class="info"></p>
+            </article>
+        </template>
+
+    </div>
 
 
     <section id="liste"></section>
