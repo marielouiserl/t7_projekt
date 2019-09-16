@@ -1,10 +1,52 @@
 /**** FORSIDE ****/
 
-.tekstboks {
-    padding: 20px;
-    background-color: white;
+.menu {
+    height: 35px;
+    width: 100vw;
+    padding-top: 27px;
+    padding-left: 830px;
+    background-color: rgba(128, 128, 128, 0.14);
 }
 
+.menu a {
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#startside_boks {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    margin-top: -30px;
+}
+
+.tekstboks {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 820px;
+    height: 240px;
+    line-height: 1.4rem;
+}
+
+.tekstboks h2 {
+    padding-bottom: 8px;
+    font-size: 2rem;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.tekstboks p {
+    padding-left: 70px;
+    padding-right: 70px;
+    font-family: 'Montserrat', sans-serif;
+}
 
 /****  FILTER SIDE *****/
 
@@ -24,8 +66,31 @@ header {
     margin-top: 80px;
     margin-left: 10px;
     margin-right: 10px;
-    margin-bottom: 80px;
+}
 
+footer {
+    display: flex;
+    position: absolute;
+    height: 50px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer_boks {
+    display: flex;
+    background-color: rgba(123, 123, 123, 0.32);
+    width: 100vw;
+    padding-left: 800px;
+    padding-right: 15px;
+}
+
+.footer_tekst_1 {
+    padding-right: 70px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer_tekst_2 {
+    font-family: 'Montserrat', sans-serif;
 }
 
 #sectionwrapper {
@@ -33,6 +98,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: -30px;
 }
 
 nav {
@@ -49,19 +115,20 @@ nav {
 }
 
 
-
 .filter_kategori {
     display: flex;
     justify-content: space-around;
     width: 80%;
 }
 
+/*
 .filter_ekstra {
     width: 50%;
     display: flex;
     justify-content: space-around;
     padding-bottom: 5px;
 }
+*/
 
 .container img {
 
@@ -111,8 +178,6 @@ nav {
     padding-right: 250px;
 }
 
-
-
 .lukpopup {
     right: 0;
     font-size: 30px;
@@ -126,7 +191,6 @@ button {
     font-family: 'Roboto Mono', monospace;
     border-left: none;
     border: none;
-
 }
 
 .filter_ekstra button {
