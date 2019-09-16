@@ -1,6 +1,7 @@
 /**** FORSIDE ****/
 
 .menu {
+    display: flex;
     height: 35px;
     width: 100vw;
     padding-top: 27px;
@@ -9,7 +10,8 @@
 }
 
 .menu a {
-    padding: 20px;
+    display: flex;
+    padding-left: 40px;
     text-decoration: none;
     color: black;
     font-family: 'Montserrat', sans-serif;
@@ -45,6 +47,13 @@
     font-size: 1.3rem;
     padding: 25px;
 }
+
+@media screen and (max-width: 700px) {
+    .button {
+        margin-top: 80px;
+    }
+}
+
 
 .button a {
     text-decoration: none;
@@ -275,13 +284,26 @@ article img {
     border: 1px solid #f0f0f0;
 }
 
+@media screen and (max-width: 700px) {
+    nav {
+        width: 100vw;
+        height: 38px;
+        margin-top: 85px;
+        padding-top: 14px;
+    }
+
+    #popup {}
+
+
+}
+
+
 
 @media screen and (min-width: 700px) {
 
     #templateModtager {
         max-width: 100%;
         grid-template-columns: repeat(2, 1fr);
-
     }
 
     nav {
@@ -290,7 +312,6 @@ article img {
         background-color: white;
         justify-content: space-around;
         padding: 10px;
-
     }
 
     header {
@@ -329,7 +350,6 @@ article img {
         padding-left: 40px;
         padding-right: 40px;
         justify-content: space-around;
-
     }
 
     header {
@@ -349,7 +369,5 @@ article img {
         padding: 40px;
         margin: 0;
         margin-right: 119px;
-
-
     }
 }
