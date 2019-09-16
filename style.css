@@ -15,6 +15,15 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.lille_logo {
+    display: flex;
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    left: 18rem;
+    top: 1rem;
+}
+
 #forside_header {
     margin-top: 160px;
 }
