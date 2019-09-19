@@ -69,7 +69,8 @@
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
-    margin-top: -30px;
+    margin-top: 80px;
+    height: 900px;
 }
 
 .tekstboks {
@@ -80,7 +81,7 @@
     margin-left: 50px;
     margin-right: 50px;
     width: 820px;
-    height: 240px;
+    height: 780px;
     line-height: 1.4rem;
 }
 
@@ -89,12 +90,35 @@
     font-size: 2rem;
     text-align: center;
     font-variant: small-caps;
+    line-height: 1.8rem;
 }
 
 .tekstboks p {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 30px;
+    padding-right: 30px;
     font-family: 'Montserrat', sans-serif;
+}
+
+.tekstboks_billede {
+    text-align: center;
+    padding-right: 60px;
+    padding-left: 50px;
+}
+
+@media screen and (min-width: 700px) {
+    .tekstboks {
+        height: 650px;
+    }
+
+    .tekstboks h2 {
+        margin-bottom: 50px;
+    }
+
+    .tekstboks p {
+        padding-left: 55px;
+        padding-right: 55px;
+        line-height: 1.5rem;
+    }
 }
 
 
