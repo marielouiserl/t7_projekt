@@ -4,7 +4,11 @@ const temp = document.querySelector("#site_template");
 let filter = "alle";
 let køn = "begge";
 
+
+
 document.addEventListener("DOMContentLoaded", getJson);
+
+
 
 async function getJson() {
     let jsonData = await fetch("https://spreadsheets.google.com/feeds/list/1Zq4nXm7sL2Vz-tsqLB3qSKQFgW6RReynNH7SS47RqWw/od6/public/values?alt=json");
@@ -42,25 +46,31 @@ function addEventlistenertoButtons() {
         elm.addEventListener("click", filtrering);
     })
 
-    document.querySelectorAll(".filter_køn").forEach(elm => {
-        elm.addEventListener("click", filtrering_køn);
-    })
+    //    document.querySelectorAll(".filter_køn").forEach(elm => {
+    //        elm.addEventListener("click", filtrering_køn);
+    //    })
 
     // console.log("klik knap", addEventlistenertoButtons);
 }
 
 function filtrering() {
     filter = this.dataset.kategori;
-    køn = "begge";
+    document.querySelector("h1").textContent = this.textContent;
+    document.querySelectorAll(".filter").forEach(elm => {
+        elm.classList.remove("valgt");
+    })
+
+    this.classList.add("valgt");
+
     visSites();
     //console.log("filtrering sker", filtrering);
 }
 
-function filtrering_køn() {
-    køn = this.dataset.køn;
-    visSites();
-    // console.log("filtrering_køn sker", filtrering_køn);
-}
+//function filtrering_køn() {
+//    køn = this.dataset.køn;
+//    visSites();
+//    // console.log("filtrering_køn sker", filtrering_køn);
+//}
 
 function visSingle(site) {
     document.querySelector("#popup").style.display = "block";

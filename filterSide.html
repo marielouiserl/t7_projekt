@@ -11,18 +11,22 @@
 
 </head>
 
-<div class="menu">
+<nav>
 
-   <div class="lille_logo">
-        <img src="logo/logo.svg" alt="lille_logo">
+    <div id="menu">
+
+
+        <div><a href="index.html">STARTSIDE</a>
+        </div>
+        <div><a href="filterSide.html">SIDER</a></div>
+        <div><a href="om.html">OM</a></div>
+        <div><a href="portfolio.html">KONTAKT</a></div>
+
+
+
     </div>
 
-    <a href="index.html">STARTSIDE</a>
-    <a href="filterSide.html">SIDER</a>
-    <a href="om.html">OM</a>
-    <a href="portfolio.html">KONTAKT</a>
-
-</div>
+</nav>
 
 <body>
     <header>
@@ -33,20 +37,19 @@
     </header>
 
     <div id="sectionwrapper">
-        <nav>
-            <div class="filter_kategori">
-                <button class="filter" data-kategori="alle">Alle</button>
-                <button class="filter" data-kategori="tøj">Tøj</button>
-                <button class="filter" data-kategori="sko">Sko</button>
-                <button class="filter" data-kategori="bolig">Bolig</button></div>
 
-            <div class="filter_ekstra">
-                <button class="filter_køn" data-køn="begge">Begge</button>
-                <button class="filter_køn" data-køn="mand">Mænd</button>
-                <button class="filter_køn" data-køn="kvinde">Kvinder</button></div>
+        <h1>ALLE</h1>
 
-        </nav>
+        <div class="filter_kategori">
+            <button class="filter valgt" data-kategori="alle">ALLE</button>
+            <button class="filter" data-kategori="tøj">TØJ</button>
+            <button class="filter" data-kategori="sko">SKO</button>
+            <button class="filter" data-kategori="bolig">BOLIG</button></div>
 
+        <div class="filter_ekstra">
+            <button class="filter_køn" data-køn="begge">Begge</button>
+            <button class="filter_køn" data-køn="mand">Mænd</button>
+            <button class="filter_køn" data-køn="kvinde">Kvinder</button></div>
 
 
         <div id="templateModtager"></div>
@@ -138,25 +141,38 @@
                 elm.addEventListener("click", filtrering);
             })
 
-            document.querySelectorAll(".filter_køn").forEach(elm => {
-                elm.addEventListener("click", filtrering_køn);
-            })
+            //            document.querySelectorAll(".filter_køn").forEach(elm => {
+            //                elm.addEventListener("click", filtrering_køn);
+            //            })
 
             // console.log("klik knap", addEventlistenertoButtons);
         }
 
         function filtrering() {
             filter = this.dataset.kategori;
-            køn = "begge";
+
+            document.querySelector("h1").textContent = this.textContent;
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.classList.remove("valgt");
+            })
+
+            this.classList.add("valgt");
+            //            køn = "begge";
             visSites();
             //console.log("filtrering sker", filtrering);
         }
 
-        function filtrering_køn() {
-            køn = this.dataset.køn;
-            visSites();
-            // console.log("filtrering_køn sker", filtrering_køn);
-        }
+        //        function filtrering_køn() {
+        //            køn = this.dataset.køn;
+        //            document.querySelector("h1").textContent = this.textContent;
+        //            document.querySelectorAll(".filter").forEach(elm => {
+        //                elm.classList.remove("valgt");
+        //            })
+        //
+        //            this.classList.add("valgt");
+        //            visSites();
+        //            // console.log("filtrering_køn sker", filtrering_køn);
+        //        }
 
         function visSingle(site) {
             document.querySelector("#popup").style.display = "block";

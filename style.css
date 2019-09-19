@@ -1,40 +1,117 @@
 /**** FORSIDE ****/
 
-.menu {
-    display: flex;
-    height: 35px;
-    width: 100vw;
-    padding-top: 27px;
-    padding-left: 830px;
-    background-color: rgba(128, 128, 128, 0.14);
+.valgt {
+    border-bottom: 1px solid #FF00E2;
 }
 
-.menu a {
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    width: 100vw;
+    text-align: right;
+
+}
+
+
+#menu {
     display: flex;
-    padding-left: 40px;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(128, 128, 128, 0.24);
+    text-align: right;
+    padding: 20px;
+}
+
+.burger_knap {
+    padding-right: 20px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+#menu a {
+
     text-decoration: none;
     color: black;
     font-family: 'Montserrat', sans-serif;
 }
+
+.filter_kategori {
+    margin-bottom: 10px;
+}
+
+#templateModtager {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: white;
+    max-width: 400px;
+    grid-gap: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    background-color: white;
+    align-self: center;
+}
+
+#sectionwrapper h1 {
+    text-align: center;
+}
+
+
+#popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 300px;
+}
+
+.indhold {
+    width: 100%;
+
+}
+
+.enkeltSite img {
+    width: 200px;
+    margin-bottom: 30px;
+
+}
+
+.enkeltSite a {
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.enkeltSite {
+    width: 100%;
+}
+
+.enkeltSite p {
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+
+
 
 
 /****** burger menu   *****/
 
 
 
+
 /******    header    ******/
 
-.lille_logo {
-    display: flex;
-    width: 150px;
-    height: 40px;
-    position: absolute;
-    left: 18rem;
-    top: 1rem;
-}
-
 #forside_header {
-    margin-top: 160px;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 #forsideknap {
@@ -55,10 +132,97 @@
     padding: 25px;
 }
 
-@media screen and (max-width: 700px) {
+footer {
+    width: 100vw;
+    margin: 0;
+
+}
+
+@media screen and (min-width: 700px) {
+
+
+
+
+    #menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgba(128, 128, 128, 0.24);
+        text-align: right;
+        padding: 20px;
+    }
+
+
+
+    #menu a {
+        display: flex;
+        padding-left: 40px;
+        text-decoration: none;
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+    }
+
     .button {
         margin-top: 80px;
     }
+
+    #templateModtager {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: white;
+        max-width: 800px;
+        grid-gap: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: center;
+        background-color: white;
+        align-self: center;
+    }
+
+    .filter_kategori {
+        width: 840px;
+        align-self: center;
+    }
+
+    #popup {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        width: 800px;
+    }
+
+    .indhold {
+        width: 100%;
+
+    }
+
+    .enkeltSite img {
+        width: 200px;
+        margin-bottom: 30px;
+
+    }
+
+    .enkeltSite a {
+        width: 100%;
+        border: 1px solid black;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .enkeltSite {
+        width: 100%;
+    }
+
+    .enkeltSite p {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+
+
+
 }
 
 .button a {
@@ -66,6 +230,9 @@
     color: black;
     padding-left: 40px;
 }
+
+
+
 
 
 /******    OM    *******/
@@ -111,27 +278,48 @@
     padding-left: 50px;
 }
 
-@media screen and (min-width: 700px) {
 
-    #om_boks {
-        height: 700px;
-    }
+/*KONTAKT SIDE*/
 
-    .tekstboks {
-        height: 650px;
-    }
-
-    .tekstboks h2 {
-        margin-bottom: 50px;
-    }
-
-    .tekstboks p {
-        padding-left: 55px;
-        padding-right: 55px;
-        line-height: 1.5rem;
-    }
+#kontakt_boks {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    margin-top: 80px;
+    height: 900px;
 }
 
+.tekstboks {
+    padding: 30px;
+    padding-bottom: 70px;
+
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 820px;
+    height: 780px;
+    line-height: 1.4rem;
+}
+
+.tekstboks h2 {
+    padding-bottom: 8px;
+    font-size: 2rem;
+    text-align: center;
+    font-variant: small-caps;
+    line-height: 1.8rem;
+}
+
+.tekstboks p {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tekstboks_billede {
+    text-align: center;
+    padding-right: 60px;
+    padding-left: 50px;
+}
 
 /****     FILTER SIDE   *****/
 
@@ -184,37 +372,18 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: -30px;
+    margin-top: 30px;
 }
 
-nav {
-    display: flex;
-    width: 800px;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    margin-bottom: 10px;
-    justify-content: space-between;
-    font-family: 'Roboto Mono', monospace;
-    background-color: white;
-    align-self: center;
-}
+
 
 
 .filter_kategori {
     display: flex;
     justify-content: space-around;
-    width: 80%;
+    background-color: white;
 }
 
-/*
-.filter_ekstra {
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 5px;
-}
-*/
 
 .container img {
 
@@ -259,10 +428,6 @@ nav {
     text-align: center;
 }
 
-.enkeltSite p {
-    padding-left: 250px;
-    padding-right: 250px;
-}
 
 .lukpopup {
     right: 0;
@@ -297,19 +462,6 @@ h2 {
     border-bottom: 1px solid #FF00E2;
 }
 
-#templateModtager {
-    display: grid;
-    grid-template-columns: 1fr;
-    background-color: white;
-    max-width: 800px;
-    grid-gap: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
-    text-align: center;
-    background-color: white;
-    align-self: center;
-}
-
 
 .container {
     padding: 10px;
@@ -319,77 +471,6 @@ article img {
     border: 1px solid #f0f0f0;
 }
 
-@media screen and (max-width: 700px) {
-    nav {
-        width: 100vw;
-        height: 38px;
-        margin-top: 85px;
-        padding-top: 14px;
-    }
-
-    #popup {
-        width: 340px;
-        height: 500px;
-    }
-
-    .enkeltSite p {
-        width: 350px;
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 25px;
-        line-height: 1.4rem;
-        font-size: 0.9rem;
-    }
-
-    #popup img {
-        padding-bottom: 40px;
-        padding-top: 10px;
-        border: none;
-        width: 90%;
-    }
-
-    .enkeltSite a {
-        border: dotted black 0.1px;
-        padding-top: 7px;
-        padding-bottom: 7px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-
-
-
-@media screen and (min-width: 700px) {
-
-    #templateModtager {
-        max-width: 100%;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    nav {
-        display: flex;
-        text-align: center;
-        background-color: white;
-        justify-content: space-around;
-        padding: 10px;
-    }
-
-    header {
-        margin: 80px;
-    }
-
-    #popup {
-        display: none;
-        position: fixed;
-        top: 10px;
-        background-color: white;
-        border: 1px solid black;
-        text-align: center;
-        padding: 40px;
-        margin: 0;
-        margin-right: 119px;
-    }
-}
 
 @media screen and (min-width: 1200px) {
 
@@ -397,19 +478,34 @@ article img {
         max-width: 800px;
         grid-template-columns: repeat(3, 1fr);
         text-align: center;
-        /*
-                margin-left: 250px;
-                margin-right: 250px;
-*/
     }
 
-    nav {
+    .filter_kategori {
         display: flex;
-        text-align: center;
-        background-color: white;
-        padding-left: 40px;
-        padding-right: 40px;
         justify-content: space-around;
+        background-color: white;
+        width: 840px;
+        align-self: center;
+    }
+
+    #sectionwrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+
+
+    #menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-left: 100px;
+        background-color: rgba(128, 128, 128, 0.24);
+        text-align: right;
+        padding: 20px;
     }
 
     header {
